@@ -40,7 +40,8 @@ Search_Pls::Hmm_Search_Ok(std::string data) {
             
             std::cout << "Hmm: " << get_pls << "\n";
             
-            if(strstr(os_pls.c_str(), "Pop!_OS")) {
+            if(strstr(os_pls.c_str(), "Pop!_OS") || strstr(os_pls.c_str(), "Ubuntu") ||
+                strstr(os_pls.c_str(), "Linux Mint") || strstr(os_pls.c_str(), "Debian")) {
                 std::cout << exec_pls.ExecWithOutput("apt search " + get_pls);
             
                 std::cout << "Which? : ";
