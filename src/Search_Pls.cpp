@@ -7,12 +7,13 @@
 #include <iostream>
 #include <sstream>
 
-#include "../include/Pls.hpp"
-#include "../include/Search_Pls.hpp"
+#include <Pls.hpp>
+#include <Search_Pls.hpp>
 
-#include "../Library/FileSystemPlusPlus.h"
-#include "../Library/StringTools.hpp"
-#include "../Library/ExecutePlusPlus.hpp"
+/* PlusPlus libraries. */
+#include <FileSystemPlusPlus.h>
+#include <StringTools.hpp>
+#include <ExecutePlusPlus.hpp>
 
 /* make.pls
     pls:

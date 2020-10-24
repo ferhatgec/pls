@@ -5,11 +5,12 @@
 #*/
 
 #include <iostream>
-#include "../include/Pls.hpp"
-#include "../include/Search_Pls.hpp"
+#include <Pls.hpp>
+#include <Search_Pls.hpp>
 
-#include "../Library/FileSystemPlusPlus.h"
-#include "../Library/StringTools.hpp"
+/* PlusPlus libraries. */
+#include <FileSystemPlusPlus.h>
+#include <StringTools.hpp>
 
 
 void Oh_No(char* file, char* argument) {
