@@ -1,5 +1,8 @@
 # Fegeya Please (or Pls)
-##  Fegeya Please (or Pls), simple &amp; cross-platform package searcher.
+##  Fegeya Please (or Pls), simple &amp; cross-platform package 
+## * searcher, 
+## * installer, 
+## * maybe manager?
 
 ### Some keywords:
   * ``add: package name? <`` : It list packages starts with package name and wants a input.
