@@ -55,5 +55,16 @@ Search_Pls::Hmm_Search_Ok(std::string data) {
                     std::cout << "Ok.\n";
             }
         }
+        /* Only for Ubuntu | Debian based systems */
+        else if(strstr(get_pls.c_str(), "quick:")) {
+            get_pls = stringtools::GetBetweenString(get_pls, "quick: ", " <");
+            
+            std::cout << "Hmm: " << get_pls << "\n";
+            
+            if(strstr(os_pls.c_str(), "Pop!_OS") || strstr(os_pls.c_str(), "Ubuntu") ||
+                strstr(os_pls.c_str(), "Linux Mint") || strstr(os_pls.c_str(), "Debian")) {
+                    std::cout << exec_pls.ExecWithOutput("sudo apt-get install " + install_pls);
+            }
+        }
     }
 }   
