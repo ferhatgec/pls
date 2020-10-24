@@ -84,7 +84,7 @@ Search_Pls::Hmm_Search_Ok(std::string data) {
                 strstr(os_pls.c_str(), "Linux Mint") || strstr(os_pls.c_str(), "Debian") || 
                 strstr(os_pls.c_str(), "elementary")) {
                     std::cout << exec_pls.ExecWithOutput("sudo apt-get install " + install_pls);
-            }
+            } else std::cout << "Whoa! Warning: This OS is not supported.\n";
         }
     }
 }   
