@@ -28,8 +28,9 @@ Search_Pls::Hmm_Search_Ok(std::string data) {
     
     os_pls = fsplusplus::ReadOSName();
     
-    if(strstr(os_pls.c_str(), "Pop!_OS"))
-        std::cout << "Hmm. Your package manager: " << "apt\n";         
+    if(strstr(os_pls.c_str(), "Pop!_OS") || strstr(os_pls.c_str(), "Ubuntu") ||
+        strstr(os_pls.c_str(), "Linux Mint") || strstr(os_pls.c_str(), "Debian"))
+        std::cout << "Hmm. Your package manager: " << "apt\n";
     
     
     while (std::getline(argline_pls, get_pls)) {
