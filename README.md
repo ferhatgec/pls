@@ -4,6 +4,10 @@
 ### * installer, 
 ### * maybe manager?
 
+## Build:
+  * ``sh make.sh`` to build.
+  * ``sh install.sh`` to build & install.
+
 ## OS/Package manager support:
  * [x] Ubuntu, Debian, elementary, Pop!_OS, Linux Mint (apt)
  * [x] Fedora (dnf)
