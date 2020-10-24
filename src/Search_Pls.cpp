@@ -29,11 +29,15 @@ Search_Pls::Hmm_Search_Ok(std::string data) {
     
     os_pls = fsplusplus::ReadOSName();
     
+    std::cout << "Hmm. Your package manager: ";
+    
     if(strstr(os_pls.c_str(), "Pop!_OS") || strstr(os_pls.c_str(), "Ubuntu") ||
         strstr(os_pls.c_str(), "Linux Mint") || strstr(os_pls.c_str(), "Debian") ||
         strstr(os_pls.c_str(), "elementary"))
-        std::cout << "Hmm. Your package manager: " << "apt\n";
-    
+        std::cout << "[apt]\n";
+    else if(strstr(os_pls.c_str(), "Fedora")) {
+        std::cout << "yum/[dnf]\n";
+    }
     
     while (std::getline(argline_pls, get_pls)) {
 
@@ -53,6 +57,19 @@ Search_Pls::Hmm_Search_Ok(std::string data) {
                 
                 if(install_pls != "n" && install_pls != "N")
                     std::cout << exec_pls.ExecWithOutput("sudo apt-get install " + install_pls);
+                else
+                    std::cout << "Ok.\n";
+            } 
+            /* rpm-ostree? */
+            else if(strstr(os_pls.c_str(), "Fedora")) {
+                exec_pls.RunFunction("dnf search " + get_pls);
+            
+                std::cout << "Which? : ";
+                
+                std::getline(std::cin, install_pls);
+                
+                if(install_pls != "n" && install_pls != "N")
+                    std::cout << exec_pls.ExecWithOutput("sudo dnf install " + install_pls);
                 else
                     std::cout << "Ok.\n";
             }
